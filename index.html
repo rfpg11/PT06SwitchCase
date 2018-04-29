@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
-<body align="center">
-<h2> Carrega no botão para saberes se já chegá-mos ao fim de semana! </h2>
-<button onclick="diasdasemana()"> Carrega aqui  </button>
-<p id="demo"></p>
-<script>
-	function diasdasemana () {
-	var dia;
-	switch (new Date().getDay()) {
-		case 0:
-			dia = "Hoje é Domingo.";
-		break;
-		case 6:
-			dia = "Hoje é Sabado.";
-        break;
-		default:
-			dia = "Não é fim de semana!";
-        break;
-    }
-    document.getElementById("demo").innerHTML = dia;
-}
-</script>
-</body>
+   <body align="center">
+      <h2> Carrega no botão para saberes se já chegá-mos ao fim de semana! </h2>
+      <!-- Botão executa a função no clique -->
+      <button onclick="diasdasemana()"> Carrega aqui  </button>
+      <p id="demo"></p>
+      <script>
+         //função que vai exemplificar o ciclo switch
+         function diasdasemana () {
+         var dia;
+         //função getDay adquire o dia da semana
+         switch (new Date().getDay()) {
+         	case 0:
+         		dia = "Hoje é Domingo.";
+         	break;
+         	case 6:
+         		dia = "Hoje é Sabado.";
+                break;
+         	default:
+         		dia = "Não é fim de semana!";
+                break;
+            }
+         //o Output é representado pelo valor obtido no ciclo
+            document.getElementById("demo").innerHTML = dia;
+         }
+      </script>
+   </body>
 </html>
